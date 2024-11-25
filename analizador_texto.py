@@ -11,9 +11,13 @@ texto = texto.lower()
 
 palabras = texto.split()
 
-dic_palabras = {palabra : True for palabra in palabras}
-is_python = dic_palabras.get("python", False)
-print(f"la palabra 'Python' esta en el texto? {is_python}" )
+#dic_palabras = {palabra : True for palabra in palabras}
+#is_python = dic_palabras.get("python", False)
+#print(f"la palabra 'Python' esta en el texto? {is_python}" )
+
+buscar_python = 'python' in texto
+dic = {True:"Si", False:"no"}
+print(f"La palabra 'Python' {dic[buscar_python]} se encuentra en el texto")
 
 cantidad_palabras = len(palabras)
 
@@ -26,10 +30,6 @@ print(f"La última letra del texto es: '{ultima_letra}'")
 
 texto_reverse = texto[::-1]
 print(f"El texto al revés es: '{texto_reverse}'")
-
-dic_palabras = {palabra : True for palabra in palabras}
-is_python = dic_palabras.get("python", False)
-print(f"la palabra 'Python' esta en el texto? {is_python}" )
 
 letras = input("ahora, ingresa 3 letras aleatorias: ")
 
